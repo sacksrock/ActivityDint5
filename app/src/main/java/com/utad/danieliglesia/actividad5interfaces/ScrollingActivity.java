@@ -74,19 +74,19 @@ public class ScrollingActivity extends AppCompatActivity {
 
     public void showFabs(){
         CoordinatorLayout.LayoutParams layoutParams=(CoordinatorLayout.LayoutParams)fab1.getLayoutParams();
-        layoutParams.rightMargin+=(int)(fab1.getWidth()*2);
+        layoutParams.rightMargin+=(int)(fab1.getWidth()*1.6);
         fab1.setLayoutParams(layoutParams);
         fab1.startAnimation(show_fab1);
         fab1.setClickable(true);
 
         CoordinatorLayout.LayoutParams layoutParams2=(CoordinatorLayout.LayoutParams)fab2.getLayoutParams();
-        layoutParams.rightMargin+=(int)(fab2.getWidth()*3.4);
+        layoutParams2.rightMargin+=(int)(fab2.getWidth()*3.2);
         fab2.setLayoutParams(layoutParams2);
         fab2.startAnimation(show_fab2);
         fab2.setClickable(true);
 
         CoordinatorLayout.LayoutParams layoutParams3=(CoordinatorLayout.LayoutParams)fab3.getLayoutParams();
-        layoutParams.rightMargin-=(int)(fab3.getWidth()*4.6);
+        layoutParams3.rightMargin+=(int)(fab3.getWidth()*4.4);
         fab3.setLayoutParams(layoutParams3);
         fab3.startAnimation(show_fab3);
         fab3.setClickable(true);
@@ -94,10 +94,22 @@ public class ScrollingActivity extends AppCompatActivity {
 
     public void hideFabs(){
         CoordinatorLayout.LayoutParams layoutParams=(CoordinatorLayout.LayoutParams)fab1.getLayoutParams();
-        layoutParams.rightMargin-=(int)(fab1.getWidth()*2);
+        layoutParams.rightMargin-=(int)(fab1.getWidth()*1.6);
         fab1.setLayoutParams(layoutParams);
         fab1.startAnimation(hide_fab1);
         fab1.setClickable(false);
+
+        CoordinatorLayout.LayoutParams layoutParams2=(CoordinatorLayout.LayoutParams)fab2.getLayoutParams();
+        layoutParams2.rightMargin-=(int)(fab2.getWidth()*3.2);
+        fab2.setLayoutParams(layoutParams);
+        fab2.startAnimation(hide_fab2);
+        fab2.setClickable(false);
+
+        CoordinatorLayout.LayoutParams layoutParams3=(CoordinatorLayout.LayoutParams)fab3.getLayoutParams();
+        layoutParams3.rightMargin-=(int)(fab3.getWidth()*4.4);
+        fab3.setLayoutParams(layoutParams);
+        fab3.startAnimation(hide_fab3);
+        fab3.setClickable(false);
 
 
     }

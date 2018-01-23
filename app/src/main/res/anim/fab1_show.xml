@@ -14,9 +14,9 @@
     <!--Movimiento-->
     <translate
         android:duration="1000"
-        android:fromXDelta="0%"
+        android:fromXDelta="160%"
         android:fromYDelta="0%"
-        android:toXDelta="-200%"
+        android:toXDelta="0%"
         android:toYDelta="0%"
         android:interpolator="@android:anim/linear_interpolator">
     </translate>
